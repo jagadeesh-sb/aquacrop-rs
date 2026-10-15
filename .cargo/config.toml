@@ -1,0 +1,4 @@
+# Tests can also run as WebAssembly under Node (`cargo test --target wasm32-wasip1`),
+# which checks the build the browser uses and needs no native test executable.
+[target.wasm32-wasip1]
+runner = "node scripts/wasi-runner.mjs"

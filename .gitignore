@@ -1,0 +1,7 @@
+/target
+/pkg
+Cargo.lock.bak
+# Reference runs: regenerate with `python scripts/golden.py` (CI does).
+/tests/golden/
+/tests/golden-*/
+__pycache__/

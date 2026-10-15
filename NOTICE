@@ -1,0 +1,20 @@
+aquacrop-rs
+Copyright 2026 Piezoline Technologies Private Limited
+
+This product is a Rust port of AquaCrop-OSPy
+(https://github.com/aquacropos/aquacrop), version 3.1.0, licensed under the
+Apache License, Version 2.0. AquaCrop-OSPy is the work of Tim Foster,
+Thomas Kelly and its contributors.
+
+The crop parameter table (data/crop_params.json) and the CO2 concentration
+series (data/co2/) are taken unchanged from AquaCrop-OSPy 3.1.0.
+
+The source files under src/ were translated from the corresponding
+AquaCrop-OSPy Python modules (aquacrop/entities, aquacrop/initialize,
+aquacrop/solution, aquacrop/timestep and aquacrop/core.py). Changes from the
+original are the translation itself and the places marked "Deviation:" in
+the source, where the port returns an error or takes a defined branch where
+AquaCrop-OSPy raises an exception.
+
+AquaCrop-OSPy is not an official implementation of the FAO AquaCrop model,
+and neither is this port.

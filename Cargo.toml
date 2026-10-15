@@ -1,0 +1,35 @@
+[package]
+name = "aquacrop"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+license = "Apache-2.0"
+description = "AquaCrop crop-water productivity model in Rust: a faithful port of AquaCrop-OSPy, for native code and WebAssembly"
+repository = "https://github.com/GeoPilot-AI/aquacrop-rs"
+readme = "README.md"
+keywords = ["aquacrop", "crop-model", "irrigation", "agriculture", "hydrology"]
+categories = ["science", "simulation", "wasm"]
+exclude = ["tests/golden/*.json"]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+wasm = ["dep:wasm-bindgen"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+# float_roundtrip: parse decimals exactly; the default parser can be one bit off,
+# and a weather value one bit off changes a long simulation.
+serde_json = { version = "1", features = ["float_roundtrip"] }
+wasm-bindgen = { version = "0.2", optional = true }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[profile.wasm]
+inherits = "release"
+opt-level = "s"

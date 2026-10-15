@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+          components: clippy
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Reference runs from AquaCrop-OSPy
+        run: |
+          pip install aquacrop==3.1.0 numpy==2.5.4 pandas==3.0.6
+          python -W ignore scripts/golden.py
+      - name: Unit and reference tests
+        run: cargo test --release
+      - name: Clippy
+        run: cargo clippy --all-targets -- -D warnings
+      - name: WebAssembly build
+        run: |
+          cargo build --profile wasm --target wasm32-unknown-unknown --features wasm
+          V=$(cargo pkgid -p wasm-bindgen | sed 's/.*@//')
+          cargo install wasm-bindgen-cli --version "$V" --locked
+          wasm-bindgen --target web --out-dir pkg target/wasm32-unknown-unknown/wasm/aquacrop.wasm
+          ls -l pkg
+      - name: WebAssembly against the reference runs
+        run: node scripts/wasm-check.mjs
