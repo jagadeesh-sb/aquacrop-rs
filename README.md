@@ -1,6 +1,28 @@
-# aquacrop-rs
+<h1 align="center">aquacrop-rs</h1>
 
-A Rust port of [AquaCrop-OSPy](https://github.com/aquacropos/aquacrop) 3.1.0,
+<p align="center">
+The AquaCrop crop-water productivity model in Rust and WebAssembly,<br>
+ported line by line from AquaCrop-OSPy 3.1.0
+</p>
+
+<p align="center">
+<a href="https://github.com/jagadeesh-sb/aquacrop-rs/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/jagadeesh-sb/aquacrop-rs/actions/workflows/ci.yml/badge.svg"></a>
+<a href="LICENSE"><img alt="Licence: Apache-2.0" src="https://img.shields.io/badge/licence-Apache--2.0-blue.svg"></a>
+<img alt="Rust 1.82 or newer" src="https://img.shields.io/badge/rust-1.82%2B-orange.svg">
+<img alt="WebAssembly 626 KB" src="https://img.shields.io/badge/WebAssembly-626%20KB-654ff0.svg">
+<a href="CITATION.cff"><img alt="Cite this software" src="https://img.shields.io/badge/cite-CITATION.cff-green.svg"></a>
+</p>
+
+<p align="center">
+<a href="#performance">Performance</a> ·
+<a href="#what-the-speed-is-for">Applications</a> ·
+<a href="#use">Use</a> ·
+<a href="#agreement-with-aquacrop-ospy">Validation</a> ·
+<a href="docs/README.md">Documentation</a> ·
+<a href="#citing">Citing</a>
+</p>
+
+aquacrop-rs is a Rust port of [AquaCrop-OSPy](https://github.com/aquacropos/aquacrop) 3.1.0,
 the open-source Python implementation of the FAO AquaCrop crop-water
 productivity model. It simulates canopy cover, rooting, soil water, soil
 evaporation, transpiration, biomass and yield day by day, for one field and
@@ -11,7 +33,7 @@ The port follows the Python code module by module and keeps its variable
 names, so each formula can be read side by side with the original. It is not
 an official implementation of FAO AquaCrop, and neither is AquaCrop-OSPy.
 
-## At a glance
+## Performance
 
 Measured on 18 November 2026 against AquaCrop-OSPy 3.1.0 on the same
 machine ([performance](docs/performance.md), [validation](docs/validation.md)):
@@ -28,6 +50,72 @@ AquaCrop-OSPy once both are running, and 92.9% of its lines are run by the
 tests.
 
 ![Times faster than AquaCrop-OSPy](docs/images/2_times_faster.png)
+
+## What the speed is for
+
+A single AquaCrop run is quick in any language. The difference shows when a
+question needs thousands of runs. The figures below come from the benchmark
+machine (Intel Core i7-13620H, 16 threads, Linux container); estimates
+multiply the measured time per run and are marked as such.
+
+### Searching irrigation schedules
+
+[`examples/irrigation_sweep.rs`](examples/irrigation_sweep.rs) tries 625
+irrigation schedules for wheat at Tunis (four soil-moisture thresholds, one
+per growth stage, each at 0, 20, 40, 60 or 80 percent) and runs all 23
+seasons from 1979 to 2002 for each one.
+
+```sh
+cargo run --release --example irrigation_sweep
+```
+
+| | Time for 625 schedules |
+|---|---:|
+| aquacrop-rs, 1 thread (measured) | 20.5 s |
+| aquacrop-rs, 16 threads (measured) | 3.2 s |
+| AquaCrop-OSPy, 1 process (estimate: 625 x 5.27 s) | about 55 min |
+
+The same search can be run field by field, with each field's own soil and
+weather, which is slow work in Python. At Tunis the rain meets most of the
+crop's need: the best schedule raises the mean yield from 9.22 t/ha
+(rainfed) to 9.37 t/ha with 32 mm of water a season.
+
+### Calibration and uncertainty
+
+Fitting crop parameters to observed yields or to satellite evapotranspiration
+(for example with [Optuna](https://optuna.org) or a Monte Carlo sampler)
+takes from thousands to hundreds of thousands of model runs. For 100,000
+runs of a 23-year simulation:
+
+| | 100,000 runs |
+|---|---:|
+| aquacrop-rs, 16 threads (estimate: 100,000 x 5.1 ms) | about 9 min |
+| aquacrop-rs, 1 thread (estimate: 100,000 x 32.8 ms) | about 55 min |
+| AquaCrop-OSPy, 1 process (estimate: 100,000 x 5.27 s) | about 6 days |
+
+### Regional and climate-change runs
+
+Running every cell of a map under several climate projections multiplies the
+runs again. The median cost of one simulated year is 1.2 ms in aquacrop-rs
+and 187 ms in AquaCrop-OSPy ([performance](docs/performance.md)). For 1,000
+grid cells, 10 climate projections and 30 years each (estimates, one core):
+about 6 minutes in aquacrop-rs and about 16 hours in AquaCrop-OSPy.
+
+### Field advice without a server
+
+The WebAssembly build is a 626 KB file with no Python, numpy or pandas behind
+it. It ran the 23-year Tunis simulation in 58 ms in Node.js, which runs the
+same WebAssembly as a browser. A web or phone app can therefore run the model
+on the user's own device, with no server and no network once the page is
+loaded. This repository provides the module and the JavaScript usage shown below,
+not a finished app.
+
+### Inside other software
+
+Rust programs call the model as a library, and JavaScript calls it through
+the WebAssembly module, with no Python runtime in either case. The input is one JSON
+document with AquaCrop-OSPy's own names, so models built for AquaCrop-OSPy
+carry over.
 
 ## Documentation
 
@@ -69,7 +157,9 @@ checks and runs the ninth, which fails on a pandas 3 incompatibility.
   relative 1.1e-5.
 
 AquaCrop-OSPy itself gives slightly different daily values on Windows and on
-Linux for the same reason, so references are generated on Linux.
+Linux for the same reason, so references are generated on Linux. numpy's
+AVX-512 maths can also change the last bit, so the reference runs are made
+with it switched off (see [validation](docs/validation.md)).
 
 ## Use
 
@@ -154,10 +244,17 @@ AquaCrop-OSPy 3.1.0.
 
 ```sh
 pip install aquacrop==3.1.0 numpy==2.5.4 pandas==3.0.6
+export NPY_DISABLE_CPU_FEATURES="X86_V4 AVX512_ICL AVX512_SPR"   # see docs/validation.md
 python scripts/golden.py        # writes tests/golden/, about 90 MB
 cargo test
 node scripts/wasm-check.mjs     # after building pkg/
 ```
+
+## Citing
+
+If you use aquacrop-rs, please cite the software (see
+[CITATION.cff](CITATION.cff); GitHub's "Cite this repository" button gives
+the reference) and the AquaCrop-OSPy paper below.
 
 ## Licence and credit
 
