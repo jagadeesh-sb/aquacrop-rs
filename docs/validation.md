@@ -88,10 +88,15 @@ day's water balance.
 AquaCrop-OSPy has the same issue between operating systems: on Windows it
 gives slightly different daily values from Linux. This is why the reference
 files are made on Linux.
-The same holds between Linux versions: the figures above are from Debian 12
-(glibc 2.36), which CI also uses. On Ubuntu 24.04 (glibc 2.39), 2 of the 74
-scenarios (`in_sorghum_rabi`, `soil_custom_texture`) differ in daily soil
-water beyond the 1e-9 tolerance; all 74 pass on Debian 12.
+The CPU matters too. numpy uses AVX-512 versions of `exp` and `log` on
+processors that have them (numpy reports these as `X86_V4`), and they can
+round the last bit differently from the AVX2 versions. The figures above were
+made on a processor without AVX-512. When the reference runs were made on an
+AMD EPYC 9V74 with AVX-512 enabled, 2 of the 74 scenarios
+(`in_sorghum_rabi`, `soil_custom_texture`) differed from aquacrop-rs in daily
+soil water beyond the 1e-9 tolerance. With `NPY_DISABLE_CPU_FEATURES="X86_V4
+AVX512_ICL AVX512_SPR"` on the same machine, all 74 agreed. CI sets this
+variable when it makes the reference runs.
 
 ## Test coverage
 

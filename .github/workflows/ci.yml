@@ -8,8 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    # Debian 12 (glibc 2.36): the reference figures in docs/validation.md were
-    # measured here. On ubuntu-latest two scenarios differ in daily soil water.
+    # Debian 12 (glibc 2.36), as in the benchmark container (bench/scripts/Dockerfile).
     container: python:3.12-bookworm
     steps:
       - uses: actions/checkout@v4
