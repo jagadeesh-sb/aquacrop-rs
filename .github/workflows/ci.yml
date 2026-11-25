@@ -8,15 +8,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    # Debian 12 (glibc 2.36): the reference figures in docs/validation.md were
+    # measured here. Ubuntu's newer glibc rounds exp/ln/pow differently in the
+    # last bit, which tips two scenarios past a threshold.
+    container: python:3.12-bookworm
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
           components: clippy
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
