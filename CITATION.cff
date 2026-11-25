@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  If you use aquacrop-rs, please cite the software and the AquaCrop-OSPy paper
+  it is ported from.
+title: "aquacrop-rs: AquaCrop-OSPy ported to Rust and WebAssembly"
+type: software
+authors:
+  - family-names: Gaddam
+    given-names: Jagadeesh
+    affiliation: Piezoline Technologies Private Limited
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/jagadeesh-sb/aquacrop-rs"
+keywords:
+  - AquaCrop
+  - crop model
+  - crop water productivity
+  - irrigation
+  - Rust
+  - WebAssembly
+references:
+  - type: article
+    title: "AquaCrop-OSPy: Bridging the gap between research and practice in crop-water modeling"
+    authors:
+      - family-names: Kelly
+        given-names: Thomas D.
+      - family-names: Foster
+        given-names: Timothy
+    journal: Agricultural Water Management
+    volume: 254
+    start: 106976
+    year: 2021
+    doi: 10.1016/j.agwat.2021.106976
