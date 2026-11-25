@@ -9,8 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     # Debian 12 (glibc 2.36): the reference figures in docs/validation.md were
-    # measured here. Ubuntu's newer glibc rounds exp/ln/pow differently in the
-    # last bit, which tips two scenarios past a threshold.
+    # measured here. On ubuntu-latest two scenarios differ in daily soil water.
     container: python:3.12-bookworm
     steps:
       - uses: actions/checkout@v4

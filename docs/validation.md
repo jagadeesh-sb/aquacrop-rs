@@ -90,8 +90,8 @@ gives slightly different daily values from Linux. This is why the reference
 files are made on Linux.
 The same holds between Linux versions: the figures above are from Debian 12
 (glibc 2.36), which CI also uses. On Ubuntu 24.04 (glibc 2.39), 2 of the 74
-scenarios (`in_sorghum_rabi`, `soil_custom_texture`) cross a drainage or
-rounding threshold on one day and fail the 1e-9 tolerance.
+scenarios (`in_sorghum_rabi`, `soil_custom_texture`) differ in daily soil
+water beyond the 1e-9 tolerance; all 74 pass on Debian 12.
 
 ## Test coverage
 
