@@ -1,0 +1,1350 @@
+{
+ "cpu": "\t: 13th Gen Intel(R) Core(TM) i7-13620H",
+ "nproc": 16,
+ "rust_build_s": 17.25398265000001,
+ "python_first_import_ms": 404.8628600000086,
+ "cold": {
+  "tunis_wheat": {
+   "python": {
+    "wall_ms": 2002.3105559999976,
+    "import_ms": 467.3086969999929,
+    "run_ms": 1485.9425529999726,
+    "yield_sum": 52.80513037780627
+   },
+   "rust": {
+    "wall_ms": 44.433609000009255,
+    "import_ms": 0.0,
+    "run_ms": 10.443654,
+    "yield_sum": 52.80513037780627
+   },
+   "wasm": {
+    "wall_ms": 91.00452199999154,
+    "import_ms": 12.742085000000003,
+    "run_ms": 37.86736799999999,
+    "yield_sum": 52.80513037780627
+   }
+  },
+  "fao_paddy_hyderabad": {
+   "python": {
+    "wall_ms": 1471.1183860000006,
+    "import_ms": 396.49875599999973,
+    "run_ms": 937.5062880000087,
+    "yield_sum": 69.97669373424444
+   },
+   "rust": {
+    "wall_ms": 51.33010299999796,
+    "import_ms": 0.0,
+    "run_ms": 11.224031,
+    "yield_sum": 69.97669373424444
+   },
+   "wasm": {
+    "wall_ms": 100.92696999998907,
+    "import_ms": 12.558915999999996,
+    "run_ms": 44.307831,
+    "yield_sum": 69.97669373424444
+   }
+  },
+  "fao_tunis_1": {
+   "python": {
+    "wall_ms": 5895.4376169999705,
+    "import_ms": 396.1807659999863,
+    "run_ms": 5318.591185000003,
+    "yield_sum": 168.80570314876198
+   },
+   "rust": {
+    "wall_ms": 98.18930599999476,
+    "import_ms": 0.0,
+    "run_ms": 31.715622,
+    "yield_sum": 168.80570314876198
+   },
+   "wasm": {
+    "wall_ms": 191.2899609999954,
+    "import_ms": 24.777853,
+    "run_ms": 91.20145299999999,
+    "yield_sum": 168.80570314876198
+   }
+  },
+  "fao_potato_brussels": {
+   "python": {
+    "wall_ms": 4020.1800899999967,
+    "import_ms": 488.2902680000143,
+    "run_ms": 3298.414306999973,
+    "yield_sum": 274.0209520543523
+   },
+   "rust": {
+    "wall_ms": 130.6096160000152,
+    "import_ms": 0.0,
+    "run_ms": 32.881371,
+    "yield_sum": 274.0209520543524
+   },
+   "wasm": {
+    "wall_ms": 190.42328599999792,
+    "import_ms": 21.463357,
+    "run_ms": 92.40055199999999,
+    "yield_sum": 274.02095205435234
+   }
+  }
+ },
+ "warm": {
+  "python": {
+   "tunis_wheat": {
+    "first_ms": 1457.9074790000277,
+    "median_ms": 1489.8052050000103
+   },
+   "fao_paddy_hyderabad": {
+    "first_ms": 991.9291919999864,
+    "median_ms": 946.961729499975
+   },
+   "fao_tunis_1": {
+    "first_ms": 5506.029556999976,
+    "median_ms": 5271.292716999995
+   },
+   "fao_potato_brussels": {
+    "first_ms": 3163.2374859999572,
+    "median_ms": 3146.467123999997
+   }
+  },
+  "rust": {
+   "tunis_wheat": {
+    "first_ms": 9.088030999999999,
+    "median_ms": 8.33052
+   },
+   "fao_paddy_hyderabad": {
+    "first_ms": 7.650193,
+    "median_ms": 7.003554
+   },
+   "fao_tunis_1": {
+    "first_ms": 29.462592,
+    "median_ms": 28.617912999999998
+   },
+   "fao_potato_brussels": {
+    "first_ms": 30.001896,
+    "median_ms": 25.509665000000002
+   }
+  },
+  "wasm": {
+   "tunis_wheat": {
+    "first_ms": 38.543301,
+    "median_ms": 17.67276000000001
+   },
+   "fao_paddy_hyderabad": {
+    "first_ms": 22.063987999999995,
+    "median_ms": 21.63741200000004
+   },
+   "fao_tunis_1": {
+    "first_ms": 67.33800599999995,
+    "median_ms": 58.45698399999992
+   },
+   "fao_potato_brussels": {
+    "first_ms": 60.411307999999735,
+    "median_ms": 59.19783499999994
+   }
+  }
+ },
+ "all": {
+  "meta": {
+   "adaptive_planting": {
+    "years": 7.000684462696783,
+    "error": false
+   },
+   "co2_constant_550": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "co2_series": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "crop_overrides": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "fao_paddy_hyderabad": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "fao_potato_brussels": {
+    "years": 30.001368925393567,
+    "error": false
+   },
+   "fao_tunis_1": {
+    "years": 22.625598904859686,
+    "error": false
+   },
+   "fao_tunis_1_sandyloam": {
+    "years": 23.411362080766597,
+    "error": false
+   },
+   "fao_tunis_2_long": {
+    "years": 23.41409993155373,
+    "error": false
+   },
+   "fao_tunis_3_30taw": {
+    "years": 23.41409993155373,
+    "error": false
+   },
+   "fao_tunis_6_net_irrigation": {
+    "years": 21.960301163586585,
+    "error": false
+   },
+   "field_mulch_cn": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "field_runoff_inhibited": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "gw_constant": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "gw_shallow_clay": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "gw_steps": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "gw_variable": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "in_cotton_clay": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_cotton_gdd": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_maize_kharif": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_paddy_gdd": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_sorghum_rabi": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_soybean": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_sugarcane": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "in_tomato": {
+    "years": 11.000684462696784,
+    "error": false
+   },
+   "irr_depth": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "irr_interval": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "irr_net": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "irr_schedule": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "irr_smt": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "irr_smt_default": {
+    "years": 8.501026694045175,
+    "error": true
+   },
+   "off_season": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "preset_AlfalfaGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_Barley": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_BarleyGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Cassava": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Cotton": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_CottonGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_Default": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_DryBean": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_DryBeanGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_HydWheatGDD": {
+    "years": 7.000684462696783,
+    "error": false
+   },
+   "preset_Maize": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_MaizeChampionGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_MaizeGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_PaddyRice": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_PaddyRiceGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_Potato": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_PotatoGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_PotatoLocalGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Quinoa": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Sorghum": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SorghumGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_Soybean": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SoybeanGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_SugarBeet": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SugarBeetGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SugarBeetGDD_UK": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SugarCane": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Sunflower": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_SunflowerGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Tef": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_Tomato": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_TomatoGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_Wheat": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_WheatGDD": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_WheatGDD_1dec": {
+    "years": 8.999315537303216,
+    "error": false
+   },
+   "preset_WheatLongGDD": {
+    "years": 8.999315537303216,
+    "error": true
+   },
+   "preset_localpaddy": {
+    "years": 7.000684462696783,
+    "error": false
+   },
+   "soil_custom_hydraulic": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "soil_custom_texture": {
+    "years": 5.664613278576318,
+    "error": false
+   },
+   "soil_tile_drainage": {
+    "years": 6.0013689253935665,
+    "error": false
+   },
+   "switch_gdd": {
+    "years": 6.663928815879535,
+    "error": false
+   },
+   "tunis_wheat": {
+    "years": 5.664613278576318,
+    "error": false
+   }
+  },
+  "python": {
+   "wall_ms": 116714.31595999996,
+   "import_ms": 527.1700590000137,
+   "per": {
+    "adaptive_planting": {
+     "ms": 1077.468768000017,
+     "yield_sum": 78.14590860000318
+    },
+    "co2_constant_550": {
+     "ms": 1465.7075019999866,
+     "yield_sum": 72.17611106221473
+    },
+    "co2_series": {
+     "ms": 1470.581691999996,
+     "yield_sum": 69.38142190964014
+    },
+    "crop_overrides": {
+     "ms": 1474.9213970000028,
+     "yield_sum": 99.33938033741849
+    },
+    "fao_paddy_hyderabad": {
+     "ms": 888.1995180000217,
+     "yield_sum": 69.97669373424444
+    },
+    "fao_potato_brussels": {
+     "ms": 3105.505690999962,
+     "yield_sum": 274.0209520543523
+    },
+    "fao_tunis_1": {
+     "ms": 5102.141232000008,
+     "yield_sum": 168.80570314876198
+    },
+    "fao_tunis_1_sandyloam": {
+     "ms": 5120.342518999962,
+     "yield_sum": 198.74678753388264
+    },
+    "fao_tunis_2_long": {
+     "ms": 6902.1519130000115,
+     "yield_sum": 199.79215325337142
+    },
+    "fao_tunis_3_30taw": {
+     "ms": 5370.774605999997,
+     "yield_sum": 134.72302771585103
+    },
+    "fao_tunis_6_net_irrigation": {
+     "ms": 3991.8383809999796,
+     "yield_sum": 184.39905957170004
+    },
+    "field_mulch_cn": {
+     "ms": 1408.9218180000103,
+     "yield_sum": 52.80576282499162
+    },
+    "field_runoff_inhibited": {
+     "ms": 1399.1192159999741,
+     "yield_sum": 52.80388334539686
+    },
+    "gw_constant": {
+     "ms": 1564.0361589999543,
+     "yield_sum": 52.80572953536903
+    },
+    "gw_shallow_clay": {
+     "ms": 1473.798458000033,
+     "yield_sum": 52.70487404351688
+    },
+    "gw_steps": {
+     "ms": 1454.1933980000294,
+     "yield_sum": 52.74514786300745
+    },
+    "gw_variable": {
+     "ms": 1306.0052679999785,
+     "yield_sum": 50.392076635141116
+    },
+    "in_cotton_clay": {
+     "ms": 2063.9644099999828,
+     "yield_sum": 19.846055551385028
+    },
+    "in_cotton_gdd": {
+     "ms": 2060.1834610000083,
+     "yield_sum": 47.88907844807065
+    },
+    "in_maize_kharif": {
+     "ms": 1753.6168080000039,
+     "yield_sum": 158.88926383757496
+    },
+    "in_paddy_gdd": {
+     "ms": 986.6664059999835,
+     "yield_sum": 76.34571605030267
+    },
+    "in_sorghum_rabi": {
+     "ms": 1249.5798079999645,
+     "yield_sum": 90.94183258122892
+    },
+    "in_soybean": {
+     "ms": 1748.8451620000092,
+     "yield_sum": 51.25646716629473
+    },
+    "in_sugarcane": {
+     "ms": 377.38408799998524,
+     "yield_sum": 1.1831612230237238
+    },
+    "in_tomato": {
+     "ms": 1265.3321620000497,
+     "yield_sum": 80.6043202764325
+    },
+    "irr_depth": {
+     "ms": 1610.547012999973,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_interval": {
+     "ms": 1681.2047749999692,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_net": {
+     "ms": 1954.549773999986,
+     "yield_sum": 61.99749957311835
+    },
+    "irr_schedule": {
+     "ms": 1692.6202959999728,
+     "yield_sum": 61.99750258890858
+    },
+    "irr_smt": {
+     "ms": 1678.7109850000093,
+     "yield_sum": 61.99658366340549
+    },
+    "irr_smt_default": {
+     "ms": 21.868427000015345,
+     "yield_sum": NaN
+    },
+    "off_season": {
+     "ms": 1535.4575910000108,
+     "yield_sum": 37.3409508153224
+    },
+    "preset_AlfalfaGDD": {
+     "ms": 34.245866999981445,
+     "yield_sum": NaN
+    },
+    "preset_Barley": {
+     "ms": 1056.6768820000334,
+     "yield_sum": 0.0
+    },
+    "preset_BarleyGDD": {
+     "ms": 2485.3221640000243,
+     "yield_sum": 17.72689479624538
+    },
+    "preset_Cassava": {
+     "ms": 249.92609700001367,
+     "yield_sum": 0.0
+    },
+    "preset_Cotton": {
+     "ms": 2062.722882999992,
+     "yield_sum": 29.93582639090207
+    },
+    "preset_CottonGDD": {
+     "ms": 17.989907000014682,
+     "yield_sum": NaN
+    },
+    "preset_Default": {
+     "ms": 1214.8035160000177,
+     "yield_sum": 22.649521570235173
+    },
+    "preset_DryBean": {
+     "ms": 1331.7046909999704,
+     "yield_sum": 20.542360270944414
+    },
+    "preset_DryBeanGDD": {
+     "ms": 1391.853463000018,
+     "yield_sum": 18.480988547433192
+    },
+    "preset_HydWheatGDD": {
+     "ms": 861.085796999987,
+     "yield_sum": 5.106149202127427
+    },
+    "preset_Maize": {
+     "ms": 1480.736314000012,
+     "yield_sum": 88.93365821139521
+    },
+    "preset_MaizeChampionGDD": {
+     "ms": 1558.839522000028,
+     "yield_sum": 48.569181756520535
+    },
+    "preset_MaizeGDD": {
+     "ms": 22.838992000004055,
+     "yield_sum": NaN
+    },
+    "preset_PaddyRice": {
+     "ms": 748.408583000014,
+     "yield_sum": 7.994441379559813
+    },
+    "preset_PaddyRiceGDD": {
+     "ms": 13.245982000000822,
+     "yield_sum": NaN
+    },
+    "preset_Potato": {
+     "ms": 1381.5476890000014,
+     "yield_sum": 60.6090249534083
+    },
+    "preset_PotatoGDD": {
+     "ms": 977.3980949999554,
+     "yield_sum": 46.433754868664316
+    },
+    "preset_PotatoLocalGDD": {
+     "ms": 924.6179869999764,
+     "yield_sum": 28.36400060446292
+    },
+    "preset_Quinoa": {
+     "ms": 1821.5665720000516,
+     "yield_sum": 16.463933903669915
+    },
+    "preset_Sorghum": {
+     "ms": 1123.5342970000488,
+     "yield_sum": 68.89194820712892
+    },
+    "preset_SorghumGDD": {
+     "ms": 16.71257399999604,
+     "yield_sum": NaN
+    },
+    "preset_Soybean": {
+     "ms": 1530.5365080000115,
+     "yield_sum": 25.009090888934004
+    },
+    "preset_SoybeanGDD": {
+     "ms": 18.0306330000235,
+     "yield_sum": NaN
+    },
+    "preset_SugarBeet": {
+     "ms": 1442.8949029999671,
+     "yield_sum": 55.35468237367992
+    },
+    "preset_SugarBeetGDD": {
+     "ms": 1830.27305600001,
+     "yield_sum": 45.79566474792292
+    },
+    "preset_SugarBeetGDD_UK": {
+     "ms": 1725.261171999989,
+     "yield_sum": 55.260922474037365
+    },
+    "preset_SugarCane": {
+     "ms": 312.11539099996344,
+     "yield_sum": 0.015225121218694883
+    },
+    "preset_Sunflower": {
+     "ms": 1301.2002059999759,
+     "yield_sum": 24.99059022166624
+    },
+    "preset_SunflowerGDD": {
+     "ms": 1769.3357539999965,
+     "yield_sum": 23.1317651043176
+    },
+    "preset_Tef": {
+     "ms": 726.3795280000522,
+     "yield_sum": 5.179824330262128
+    },
+    "preset_Tomato": {
+     "ms": 1238.375684999994,
+     "yield_sum": 32.006732387753395
+    },
+    "preset_TomatoGDD": {
+     "ms": 12.672463000001244,
+     "yield_sum": NaN
+    },
+    "preset_Wheat": {
+     "ms": 2174.2627880000214,
+     "yield_sum": 0.3481545417546464
+    },
+    "preset_WheatGDD": {
+     "ms": 2846.7681300000436,
+     "yield_sum": 30.78674774027693
+    },
+    "preset_WheatGDD_1dec": {
+     "ms": 2853.176770999994,
+     "yield_sum": 30.78674774027693
+    },
+    "preset_WheatLongGDD": {
+     "ms": 253.1752470000015,
+     "yield_sum": NaN
+    },
+    "preset_localpaddy": {
+     "ms": 658.8877380000326,
+     "yield_sum": 35.66944118423474
+    },
+    "soil_custom_hydraulic": {
+     "ms": 1170.503162999978,
+     "yield_sum": 46.83345220321357
+    },
+    "soil_custom_texture": {
+     "ms": 964.8787920000359,
+     "yield_sum": 43.36897168980674
+    },
+    "soil_tile_drainage": {
+     "ms": 591.9041880000009,
+     "yield_sum": 42.238877508264174
+    },
+    "switch_gdd": {
+     "ms": 1796.1890400000016,
+     "yield_sum": 0.0
+    },
+    "tunis_wheat": {
+     "ms": 1473.1249870000056,
+     "yield_sum": 52.80513037780627
+    }
+   }
+  },
+  "rust": {
+   "wall_ms": 1812.756659999991,
+   "import_ms": 0.0,
+   "per": {
+    "adaptive_planting": {
+     "ms": 8.293442,
+     "yield_sum": 78.14590860000318
+    },
+    "co2_constant_550": {
+     "ms": 7.487786,
+     "yield_sum": 72.17611106221473
+    },
+    "co2_series": {
+     "ms": 7.837375000000001,
+     "yield_sum": 69.38142190964014
+    },
+    "crop_overrides": {
+     "ms": 7.920173000000001,
+     "yield_sum": 99.33938033741849
+    },
+    "fao_paddy_hyderabad": {
+     "ms": 7.383368000000001,
+     "yield_sum": 69.97669373424444
+    },
+    "fao_potato_brussels": {
+     "ms": 26.812357,
+     "yield_sum": 274.0209520543524
+    },
+    "fao_tunis_1": {
+     "ms": 29.244737999999998,
+     "yield_sum": 168.80570314876198
+    },
+    "fao_tunis_1_sandyloam": {
+     "ms": 28.335566999999998,
+     "yield_sum": 198.74678753388264
+    },
+    "fao_tunis_2_long": {
+     "ms": 39.60172,
+     "yield_sum": 199.79215325337142
+    },
+    "fao_tunis_3_30taw": {
+     "ms": 30.423313,
+     "yield_sum": 134.72302771585103
+    },
+    "fao_tunis_6_net_irrigation": {
+     "ms": 29.339895000000002,
+     "yield_sum": 184.3990595717001
+    },
+    "field_mulch_cn": {
+     "ms": 7.168571,
+     "yield_sum": 52.80576282499162
+    },
+    "field_runoff_inhibited": {
+     "ms": 7.870284,
+     "yield_sum": 52.80388334539686
+    },
+    "gw_constant": {
+     "ms": 8.295507,
+     "yield_sum": 52.80572953536903
+    },
+    "gw_shallow_clay": {
+     "ms": 8.612135,
+     "yield_sum": 52.70487404351688
+    },
+    "gw_steps": {
+     "ms": 7.960191,
+     "yield_sum": 52.74514786300745
+    },
+    "gw_variable": {
+     "ms": 7.761619,
+     "yield_sum": 50.392076635141116
+    },
+    "in_cotton_clay": {
+     "ms": 12.091669,
+     "yield_sum": 19.846055551385028
+    },
+    "in_cotton_gdd": {
+     "ms": 11.901271,
+     "yield_sum": 47.88907844807065
+    },
+    "in_maize_kharif": {
+     "ms": 11.19003,
+     "yield_sum": 158.88926383757496
+    },
+    "in_paddy_gdd": {
+     "ms": 7.973400000000001,
+     "yield_sum": 76.34571605030266
+    },
+    "in_sorghum_rabi": {
+     "ms": 8.090703,
+     "yield_sum": 90.94183258122895
+    },
+    "in_soybean": {
+     "ms": 10.138686,
+     "yield_sum": 51.25646716629473
+    },
+    "in_sugarcane": {
+     "ms": 2.793491,
+     "yield_sum": 1.1831612230237238
+    },
+    "in_tomato": {
+     "ms": 8.308038,
+     "yield_sum": 80.6043202764325
+    },
+    "irr_depth": {
+     "ms": 8.705289,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_interval": {
+     "ms": 9.357462,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_net": {
+     "ms": 10.421698,
+     "yield_sum": 61.99749957311835
+    },
+    "irr_schedule": {
+     "ms": 9.260838,
+     "yield_sum": 61.99750258890858
+    },
+    "irr_smt": {
+     "ms": 9.283243,
+     "yield_sum": 61.99658366340549
+    },
+    "irr_smt_default": {
+     "ms": 0.063438,
+     "yield_sum": null
+    },
+    "off_season": {
+     "ms": 8.416998,
+     "yield_sum": 37.3409508153224
+    },
+    "preset_AlfalfaGDD": {
+     "ms": 9.638335,
+     "yield_sum": 0.0
+    },
+    "preset_Barley": {
+     "ms": 5.75189,
+     "yield_sum": 0.0
+    },
+    "preset_BarleyGDD": {
+     "ms": 15.183696999999999,
+     "yield_sum": 17.72689479624538
+    },
+    "preset_Cassava": {
+     "ms": 2.004492,
+     "yield_sum": 0.0
+    },
+    "preset_Cotton": {
+     "ms": 12.034535,
+     "yield_sum": 29.93582639090207
+    },
+    "preset_CottonGDD": {
+     "ms": 0.088936,
+     "yield_sum": null
+    },
+    "preset_Default": {
+     "ms": 8.272422,
+     "yield_sum": 22.649521570235173
+    },
+    "preset_DryBean": {
+     "ms": 7.741712000000001,
+     "yield_sum": 20.542360270944414
+    },
+    "preset_DryBeanGDD": {
+     "ms": 8.177573,
+     "yield_sum": 18.480988547433196
+    },
+    "preset_HydWheatGDD": {
+     "ms": 5.345915,
+     "yield_sum": 5.106149202127427
+    },
+    "preset_Maize": {
+     "ms": 8.782964000000002,
+     "yield_sum": 88.93365821139524
+    },
+    "preset_MaizeChampionGDD": {
+     "ms": 9.388751000000001,
+     "yield_sum": 48.569181756520535
+    },
+    "preset_MaizeGDD": {
+     "ms": 0.083748,
+     "yield_sum": null
+    },
+    "preset_PaddyRice": {
+     "ms": 5.653647,
+     "yield_sum": 7.994441379559814
+    },
+    "preset_PaddyRiceGDD": {
+     "ms": 0.070498,
+     "yield_sum": null
+    },
+    "preset_Potato": {
+     "ms": 8.413432,
+     "yield_sum": 60.6090249534083
+    },
+    "preset_PotatoGDD": {
+     "ms": 6.102795,
+     "yield_sum": 46.433754868664316
+    },
+    "preset_PotatoLocalGDD": {
+     "ms": 6.234412,
+     "yield_sum": 28.364000604462916
+    },
+    "preset_Quinoa": {
+     "ms": 11.115133,
+     "yield_sum": 16.463933903669915
+    },
+    "preset_Sorghum": {
+     "ms": 6.985435,
+     "yield_sum": 68.89194820712892
+    },
+    "preset_SorghumGDD": {
+     "ms": 0.072538,
+     "yield_sum": null
+    },
+    "preset_Soybean": {
+     "ms": 8.919464999999999,
+     "yield_sum": 25.009090888934004
+    },
+    "preset_SoybeanGDD": {
+     "ms": 0.06593,
+     "yield_sum": null
+    },
+    "preset_SugarBeet": {
+     "ms": 8.420705,
+     "yield_sum": 55.35468237367992
+    },
+    "preset_SugarBeetGDD": {
+     "ms": 10.793741,
+     "yield_sum": 45.79566474792292
+    },
+    "preset_SugarBeetGDD_UK": {
+     "ms": 10.396281,
+     "yield_sum": 55.260922474037365
+    },
+    "preset_SugarCane": {
+     "ms": 2.240993,
+     "yield_sum": 0.015225121218694883
+    },
+    "preset_Sunflower": {
+     "ms": 8.034641,
+     "yield_sum": 24.990590221666235
+    },
+    "preset_SunflowerGDD": {
+     "ms": 10.720139999999999,
+     "yield_sum": 23.1317651043176
+    },
+    "preset_Tef": {
+     "ms": 5.64352,
+     "yield_sum": 5.179824330262127
+    },
+    "preset_Tomato": {
+     "ms": 7.802479,
+     "yield_sum": 32.006732387753395
+    },
+    "preset_TomatoGDD": {
+     "ms": 0.063196,
+     "yield_sum": null
+    },
+    "preset_Wheat": {
+     "ms": 12.003639999999999,
+     "yield_sum": 0.3481545417546464
+    },
+    "preset_WheatGDD": {
+     "ms": 17.495632,
+     "yield_sum": 30.786747740276933
+    },
+    "preset_WheatGDD_1dec": {
+     "ms": 16.184323,
+     "yield_sum": 30.786747740276933
+    },
+    "preset_WheatLongGDD": {
+     "ms": 1.831896,
+     "yield_sum": null
+    },
+    "preset_localpaddy": {
+     "ms": 4.635263,
+     "yield_sum": 35.66944118423474
+    },
+    "soil_custom_hydraulic": {
+     "ms": 8.066818999999999,
+     "yield_sum": 46.83345220321357
+    },
+    "soil_custom_texture": {
+     "ms": 6.5911040000000005,
+     "yield_sum": 43.36897168980674
+    },
+    "soil_tile_drainage": {
+     "ms": 4.4245090000000005,
+     "yield_sum": 42.238877508264174
+    },
+    "switch_gdd": {
+     "ms": 9.169666,
+     "yield_sum": 0.0
+    },
+    "tunis_wheat": {
+     "ms": 8.523828,
+     "yield_sum": 52.80513037780627
+    }
+   }
+  },
+  "wasm": {
+   "wall_ms": 3075.4803749999837,
+   "import_ms": 45.456669999999995,
+   "per": {
+    "adaptive_planting": {
+     "ms": 37.894315000000006,
+     "yield_sum": 78.14590860000318
+    },
+    "co2_constant_550": {
+     "ms": 20.790717,
+     "yield_sum": 72.17611106221474
+    },
+    "co2_series": {
+     "ms": 18.738496999999995,
+     "yield_sum": 69.38142190964014
+    },
+    "crop_overrides": {
+     "ms": 17.406708999999978,
+     "yield_sum": 99.33938033741849
+    },
+    "fao_paddy_hyderabad": {
+     "ms": 20.392942000000005,
+     "yield_sum": 69.97669373424444
+    },
+    "fao_potato_brussels": {
+     "ms": 65.00116000000003,
+     "yield_sum": 274.02095205435234
+    },
+    "fao_tunis_1": {
+     "ms": 63.49400799999995,
+     "yield_sum": 168.80570314876198
+    },
+    "fao_tunis_1_sandyloam": {
+     "ms": 56.846813999999995,
+     "yield_sum": 198.74678753388264
+    },
+    "fao_tunis_2_long": {
+     "ms": 70.707402,
+     "yield_sum": 199.79215325337142
+    },
+    "fao_tunis_3_30taw": {
+     "ms": 58.47209499999997,
+     "yield_sum": 134.72302771585106
+    },
+    "fao_tunis_6_net_irrigation": {
+     "ms": 67.10098400000004,
+     "yield_sum": 184.3990595717001
+    },
+    "field_mulch_cn": {
+     "ms": 16.976433999999927,
+     "yield_sum": 52.80576282499162
+    },
+    "field_runoff_inhibited": {
+     "ms": 17.230373999999983,
+     "yield_sum": 52.80388334539686
+    },
+    "gw_constant": {
+     "ms": 18.614008000000013,
+     "yield_sum": 52.80572953536903
+    },
+    "gw_shallow_clay": {
+     "ms": 17.731801000000132,
+     "yield_sum": 52.70487404351689
+    },
+    "gw_steps": {
+     "ms": 17.178337000000056,
+     "yield_sum": 52.74514786300745
+    },
+    "gw_variable": {
+     "ms": 20.090917999999874,
+     "yield_sum": 50.392076635141116
+    },
+    "in_cotton_clay": {
+     "ms": 27.3184940000001,
+     "yield_sum": 19.846040462265535
+    },
+    "in_cotton_gdd": {
+     "ms": 26.407026000000087,
+     "yield_sum": 47.88907844807065
+    },
+    "in_maize_kharif": {
+     "ms": 22.887189000000035,
+     "yield_sum": 158.88926383757496
+    },
+    "in_paddy_gdd": {
+     "ms": 19.408459999999877,
+     "yield_sum": 76.34571605030266
+    },
+    "in_sorghum_rabi": {
+     "ms": 18.827932000000146,
+     "yield_sum": 90.94187392010626
+    },
+    "in_soybean": {
+     "ms": 22.445631999999932,
+     "yield_sum": 51.25646716629473
+    },
+    "in_sugarcane": {
+     "ms": 11.600550999999996,
+     "yield_sum": 1.1831612230237238
+    },
+    "in_tomato": {
+     "ms": 22.82526400000006,
+     "yield_sum": 80.6043202764325
+    },
+    "irr_depth": {
+     "ms": 19.81306900000004,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_interval": {
+     "ms": 19.219540000000052,
+     "yield_sum": 61.99751290476559
+    },
+    "irr_net": {
+     "ms": 21.21327599999995,
+     "yield_sum": 61.99749957311835
+    },
+    "irr_schedule": {
+     "ms": 18.79317100000003,
+     "yield_sum": 61.99750258890858
+    },
+    "irr_smt": {
+     "ms": 19.347436000000016,
+     "yield_sum": 61.99658366340549
+    },
+    "irr_smt_default": {
+     "ms": 2.8045620000000326,
+     "yield_sum": null
+    },
+    "off_season": {
+     "ms": 20.818406000000095,
+     "yield_sum": 37.3409508153224
+    },
+    "preset_AlfalfaGDD": {
+     "ms": 22.96784199999979,
+     "yield_sum": 0
+    },
+    "preset_Barley": {
+     "ms": 17.47453399999995,
+     "yield_sum": 0
+    },
+    "preset_BarleyGDD": {
+     "ms": 29.884901000000127,
+     "yield_sum": 17.72689479624538
+    },
+    "preset_Cassava": {
+     "ms": 10.741779999999835,
+     "yield_sum": 0
+    },
+    "preset_Cotton": {
+     "ms": 25.614534999999933,
+     "yield_sum": 29.93582639090207
+    },
+    "preset_CottonGDD": {
+     "ms": 2.5448030000000017,
+     "yield_sum": null
+    },
+    "preset_Default": {
+     "ms": 19.899406,
+     "yield_sum": 22.64952157023517
+    },
+    "preset_DryBean": {
+     "ms": 19.075524000000087,
+     "yield_sum": 20.542360270944414
+    },
+    "preset_DryBeanGDD": {
+     "ms": 20.225052000000005,
+     "yield_sum": 18.480988547433196
+    },
+    "preset_HydWheatGDD": {
+     "ms": 13.002673000000186,
+     "yield_sum": 5.106149202127434
+    },
+    "preset_Maize": {
+     "ms": 20.57025900000008,
+     "yield_sum": 88.93365821139521
+    },
+    "preset_MaizeChampionGDD": {
+     "ms": 22.326669000000038,
+     "yield_sum": 48.56918175652055
+    },
+    "preset_MaizeGDD": {
+     "ms": 2.5892809999998008,
+     "yield_sum": null
+    },
+    "preset_PaddyRice": {
+     "ms": 15.776778999999806,
+     "yield_sum": 7.994441379559814
+    },
+    "preset_PaddyRiceGDD": {
+     "ms": 2.641305999999986,
+     "yield_sum": null
+    },
+    "preset_Potato": {
+     "ms": 20.181928999999855,
+     "yield_sum": 60.6090249534083
+    },
+    "preset_PotatoGDD": {
+     "ms": 16.38412500000004,
+     "yield_sum": 46.433754868664316
+    },
+    "preset_PotatoLocalGDD": {
+     "ms": 18.361826000000292,
+     "yield_sum": 28.364000604462916
+    },
+    "preset_Quinoa": {
+     "ms": 29.233116000000336,
+     "yield_sum": 16.46393390366991
+    },
+    "preset_Sorghum": {
+     "ms": 22.885929999999917,
+     "yield_sum": 68.89194820712893
+    },
+    "preset_SorghumGDD": {
+     "ms": 2.6741739999997662,
+     "yield_sum": null
+    },
+    "preset_Soybean": {
+     "ms": 20.822631,
+     "yield_sum": 25.009090888934004
+    },
+    "preset_SoybeanGDD": {
+     "ms": 2.5940599999998994,
+     "yield_sum": null
+    },
+    "preset_SugarBeet": {
+     "ms": 20.91500999999971,
+     "yield_sum": 55.35468237367992
+    },
+    "preset_SugarBeetGDD": {
+     "ms": 23.474650999999994,
+     "yield_sum": 45.79566474792292
+    },
+    "preset_SugarBeetGDD_UK": {
+     "ms": 22.585471999999754,
+     "yield_sum": 55.260922474037365
+    },
+    "preset_SugarCane": {
+     "ms": 10.163817999999992,
+     "yield_sum": 0.015225121218694883
+    },
+    "preset_Sunflower": {
+     "ms": 20.609906000000137,
+     "yield_sum": 24.99059022166624
+    },
+    "preset_SunflowerGDD": {
+     "ms": 23.817356000000018,
+     "yield_sum": 23.1317651043176
+    },
+    "preset_Tef": {
+     "ms": 15.7322079999999,
+     "yield_sum": 5.179824330262127
+    },
+    "preset_Tomato": {
+     "ms": 19.760663999999906,
+     "yield_sum": 32.006732387753395
+    },
+    "preset_TomatoGDD": {
+     "ms": 3.0759499999999207,
+     "yield_sum": null
+    },
+    "preset_Wheat": {
+     "ms": 26.3184839999999,
+     "yield_sum": 0.34815454175464655
+    },
+    "preset_WheatGDD": {
+     "ms": 33.62908900000002,
+     "yield_sum": 30.786747740276926
+    },
+    "preset_WheatGDD_1dec": {
+     "ms": 31.482112999999572,
+     "yield_sum": 30.786747740276926
+    },
+    "preset_WheatLongGDD": {
+     "ms": 5.287720999999692,
+     "yield_sum": null
+    },
+    "preset_localpaddy": {
+     "ms": 13.111347999999907,
+     "yield_sum": 35.66944118423474
+    },
+    "soil_custom_hydraulic": {
+     "ms": 17.242506999999932,
+     "yield_sum": 46.83345220321357
+    },
+    "soil_custom_texture": {
+     "ms": 16.823167999999896,
+     "yield_sum": 43.36897168980674
+    },
+    "soil_tile_drainage": {
+     "ms": 11.447901000000002,
+     "yield_sum": 42.238877508264174
+    },
+    "switch_gdd": {
+     "ms": 19.20267899999999,
+     "yield_sum": 0
+    },
+    "tunis_wheat": {
+     "ms": 16.759639000000334,
+     "yield_sum": 52.80513037780627
+    }
+   }
+  }
+ }
+}

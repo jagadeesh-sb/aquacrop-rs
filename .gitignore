@@ -5,3 +5,7 @@ Cargo.lock.bak
 /tests/golden/
 /tests/golden-*/
 __pycache__/
+
+# Benchmark working folders (see bench/README.md)
+/bench/work/
+/bench/out/

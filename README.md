@@ -11,6 +11,37 @@ The port follows the Python code module by module and keeps its variable
 names, so each formula can be read side by side with the original. It is not
 an official implementation of FAO AquaCrop, and neither is AquaCrop-OSPy.
 
+## At a glance
+
+Measured on 18 November 2026 against AquaCrop-OSPy 3.1.0 on the same
+machine ([performance](docs/performance.md), [validation](docs/validation.md)):
+
+| | AquaCrop-OSPy | aquacrop-rs | aquacrop-rs in the browser |
+|---|---:|---:|---:|
+| One 23-year run, repeated | 5.3 s | 29 ms | 58 ms |
+| All 74 reference scenarios, start to finish | 1 min 57 s | 1.8 s | 3.1 s |
+| Scenarios identical in every bit (of 65) | | 51 | 0 |
+| Largest season yield difference (623 seasons) | | 0 | 0.00076% |
+
+The native build runs the reference scenarios 123 to 184 times faster than
+AquaCrop-OSPy once both are running, and 92.9% of its lines are run by the
+tests.
+
+![Times faster than AquaCrop-OSPy](docs/images/2_times_faster.png)
+
+## Documentation
+
+[White paper (PDF)](docs/aquacrop-rs-white-paper.pdf) ·
+[Inputs](docs/inputs.md) ·
+[Outputs](docs/outputs.md) ·
+[WebAssembly](docs/webassembly.md) ·
+[Architecture and modules](docs/architecture.md) ·
+[Differences from AquaCrop-OSPy](docs/differences.md) ·
+[Validation](docs/validation.md) ·
+[Performance](docs/performance.md) ·
+[Benchmarks](bench/README.md) ·
+[Contributing](CONTRIBUTING.md)
+
 ## Agreement with AquaCrop-OSPy
 
 `scripts/golden.py` runs AquaCrop-OSPy 3.1.0 (numpy 2.5.4, pandas 3.0.6) on
@@ -44,7 +75,7 @@ Linux for the same reason, so references are generated on Linux.
 
 ```toml
 [dependencies]
-aquacrop = { git = "https://github.com/GeoPilot-AI/aquacrop-rs" }
+aquacrop = { git = "https://github.com/jagadeesh-sb/aquacrop-rs" }
 ```
 
 ```rust
