@@ -21,8 +21,15 @@ jobs:
         with:
           node-version: "22"
       - name: Reference runs from AquaCrop-OSPy
+        # numpy uses AVX-512 versions of exp/log on CPUs that have them, and
+        # those can round the last bit differently. The published figures
+        # were made without AVX-512, so it is switched off here.
+        env:
+          NPY_DISABLE_CPU_FEATURES: "X86_V4 AVX512_ICL AVX512_SPR"
         run: |
+          grep -m1 "model name" /proc/cpuinfo
           pip install aquacrop==3.1.0 numpy==2.5.4 pandas==3.0.6
+          python -c "import numpy; numpy.show_runtime()"
           python -W ignore scripts/golden.py
       - name: Unit and reference tests
         run: cargo test --release
